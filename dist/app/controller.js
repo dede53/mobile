@@ -6,7 +6,7 @@ var app = 	angular.module('jsbin',[
 				'snap'
 			]);
 app.factory('socket', function ($rootScope) {
-	var socket = io.connect();
+	var socket = io.connect("http://" + window.location.hostname + ":3333");
 	return {
 		on: function (eventName, callback) {
 			socket.on(eventName, function () {  
