@@ -1,4 +1,20 @@
 {
-	"name":"",
-	"dependencies":{}
+	"name":"mobile",
+	"dependencies":{},
+	"version":"0.0.1",
+	"main":"none",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dede53/qs-mobile.git"
+	},
+	"author": "dede53",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dede53/qs-mobile/issues"
+	},
+	"homepage": "https://github.com/dede53/qs-mobile#readme",
+	"description": ""
 }
