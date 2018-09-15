@@ -6,7 +6,7 @@ var app = 	angular.module('jsbin',[
 				'snap'
 			]);
 app.factory('socket', function ($rootScope) {
-	var socket = io.connect();
+	var socket = io.connect("http://" + window.location.hostname + ":3333");
 	return {
 		on: function (eventName, callback) {
 			socket.on(eventName, function () {  
@@ -152,7 +152,7 @@ app.controller('appController', function($scope, socket, $rootScope, $location, 
 				}
 				break;
 			case "switch":
-				for(var i = 0; i < $rootScope.favoritDevices.length; i++){
+				for(var i = 0; i < $rootScope.favoritDevices.length || 0; i++){
 					if($rootScope.favoritDevices[i].deviceid == data.switch.device.deviceid){
 						$rootScope.favoritDevices[i].status = parseFloat(data.switch.status);
 					}
