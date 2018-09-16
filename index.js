@@ -16,6 +16,19 @@ if(mobile.settings.useHTTPS){
 	var app						=	express().http().io();
 }
 
+process.on('message', function(data) {
+	var data = JSON.parse(data);
+	pushbullet.log.error(data.protocol);
+	switch(data.protocol){
+		case "setSetting":
+			mobile.setSetting(data.setSetting.name, data.setSetting.status);
+			break;
+		default:
+			mobile.log.error(data);
+			break;
+	}
+});
+
 app.use(express.static(__dirname + '/dist'));		// provides static htmls
 
 app.get('/mobile', function(req, res) {
