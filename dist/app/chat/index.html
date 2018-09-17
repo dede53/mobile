@@ -12,6 +12,9 @@
 					<span ng-if="message.type == '2'">
 						<a target="_blank" href="{{message.message}}">{{message.message}}</a>
 					</span>
+					<span ng-if="message.type == '3'">
+						<img src="{{message.message}}" style="width: 100%; padding-right: 10px;"></img>
+					</span>
 				</p>
 			</li>
 			<li class="" ng-hide="moreMessagesAvailable">
