@@ -6,6 +6,18 @@ var status					=	{};
 var timeout					=	"";
 var fs						=	require('fs');
 
+process.on("message", function(data){
+	switch(data.protocol){
+		case "setSetting":
+			mobile.setSetting(data.data);
+			break;
+		default:
+			mobile.log.error("Nicht definiertes Protocol:" + data.protocol);
+			break;
+
+	}
+});
+
 if(mobile.settings.useHTTPS){
 	var options = {
 		key: fs.readFileSync('./key.pem'),
