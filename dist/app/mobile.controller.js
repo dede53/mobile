@@ -151,6 +151,9 @@ app.controller('appController', function($scope, socket, $rootScope, $location, 
 					$rootScope[data.masterType][data.edit.id] = data.edit;
 				}
 				break;
+            case "unshift":
+                $rootScope[data.masterType].unshift(data.unshift);
+                break;
 			case "switch":
 				for(var i = 0; i < $rootScope.favoritDevices.length || 0; i++){
 					if($rootScope.favoritDevices[i].deviceid == data.switch.device.deviceid){
