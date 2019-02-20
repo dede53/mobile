@@ -44,6 +44,10 @@ process.on('message', function(data) {
 app.use(express.static(__dirname + '/dist'));		// provides static htmls
 
 app.get('/mobile', function(req, res) {
+	res.redirect('/');
+});
+
+app.get('/', function(req, res){
 	res.sendFile(__dirname + '/dist/index.html');
 });
 

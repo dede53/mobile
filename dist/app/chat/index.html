@@ -5,7 +5,7 @@
 		<ul style="max-height:230px; overflow:auto;">
 			<li class="tile" ng-repeat="message in chatMessages | orderBy:'-id'">
 				<p class="sliderText" id="{{message.time}}">
-					<span id="italic">{{message.time | date:'d. MMM | HH:mm'}}</span>{{message.author}}:
+					<span id="italic">{{message.time | date:'d. MMM | HH:mm'}}</span> {{message.author}}:
 					<span ng-if="message.type == '1'">
 						{{message.message}}
 					</span>
@@ -13,7 +13,7 @@
 						<a target="_blank" href="{{message.message}}">{{message.message}}</a>
 					</span>
 					<span ng-if="message.type == '3'">
-						<img src="{{message.message}}" style="width: 100%; padding-right: 10px;"></img>
+						<img src="{{message.message}}" ng-class="showFullscreen[message.id] == true ? 'showFullscreen' : 'photoInline'" ng-click="openFullscreen(message)"></img>
 					</span>
 				</p>
 			</li>

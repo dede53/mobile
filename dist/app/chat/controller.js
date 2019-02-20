@@ -3,6 +3,7 @@ app.controller("chatController", function($rootScope, $scope, socket){
 		type:1,
 		message:""
 	}
+	$scope.showFullscreen = {};
 	if(Object.keys($rootScope.chatMessages).length <= 0){
 		socket.emit("messages:loadOld", new Date().getTime());
 	}
@@ -16,4 +17,11 @@ app.controller("chatController", function($rootScope, $scope, socket){
 		$scope.link.message = "";
 		$scope.link.type = "1";
 	};
+	$scope.openFullscreen = function(message){
+		if($scope.showFullscreen[message.id] == (undefined || false)){
+			$scope.showFullscreen[message.id] = true;
+		}else{
+			$scope.showFullscreen[message.id] = false;
+		}
+	}
 });
