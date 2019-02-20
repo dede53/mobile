@@ -1,7 +1,7 @@
 <h3>Countdowns</h3>
 <div ng-show="$root.countdowns | isEmpty" class="alert alert-info" role="alert">Keine Countdowns gesetzt!</div>
 <div class="card" ng-hide="$root.countdowns | isEmpty">
-	<div class="card-block">
+	<div class="card-body p-2">
 		<ul style=" overflow:auto">
 			<li ng-repeat="countdown in $root.countdowns">
 				<p>{{countdown.device.name}} ({{countdown.device.Raum}}) um {{countdown.time | date:'HH:mm'}} {{countdown.status ? countdown.device.buttonLabelOn :  countdown.device.buttonLabelOff}}
