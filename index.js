@@ -6,7 +6,7 @@ var status					=	{};
 var timeout					=	"";
 var fs						=	require('fs');
 
-process.on("message", function(data){
+mobile.on("mobile", function(data){
 	switch(data.protocol){
 		case "setSetting":
 			mobile.setSetting(data.data);

@@ -23,8 +23,11 @@
 	</h4>
 	<div class="class-block collapse" ng-hide="devicelist | isEmpty" id="group{{group.id}}">
 		<ul class="list-group list-group-flush">
-			<li class="mx-1" ng-repeat="device in group.groupDevices">
+			<li class="mx-1" ng-repeat="device in group.groupDevices" ng-if="device.type == 'device'">
 				{{devicelist[device.id].name}} ({{devicelist[device.id].Raum}})
+			</li>
+			<li class="mx-1" ng-repeat="device in group.groupDevices" ng-if="device.type == 'room'">
+				Raum
 			</li>
 		</ul>
 	</div>

@@ -13,7 +13,11 @@ app.controller('temperatureController', function($scope,$rootScope, socket){
 			chart: {
 				backgroundColor: 'transparent',
 				renderTo:"chart",
-				zoomType:"x"
+				zoomType:"x",
+				spacingBottom: 0,
+        spacingTop: 0,
+        spacingLeft: 0,
+        spacingRight: 0
 			},
 			plotOptions: {
 				series: {
