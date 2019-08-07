@@ -132,7 +132,13 @@ button{
 	background-color:#ffc0c0;
 	background-color: #c0d7ff;
 	width: auto;
-	min-width: 85px; 
+	min-width: 85px;
+}
+.boxOn{
+	fill: #4d5cad;
+}
+.boxOff{
+	fill: #4d5cad;
 }
 .btnGrey{
 	background-color:lightgrey;

@@ -8,7 +8,7 @@
 			>
 			<ng-md-icon
 				icon="{{device.status ? 'check_box_outline_blank' : 'check_box'}}"
-				style="fill:#fc6b6b;"
+				class="boxOff"
 				size="20"
 				ng-hide="device.showStatus == 0">
 			</ng-md-icon>
@@ -21,7 +21,7 @@
 			>
 			<ng-md-icon 
 				icon="{{device.status ? 'check_box' : 'check_box_outline_blank'}}"
-				style="fill:#389B20"
+				class="boxOn"
 				size="20"
 				ng-hide="device.showStatus == 0">
 			</ng-md-icon>
