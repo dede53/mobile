@@ -124,11 +124,13 @@ button{
 }
 .btnOn{
 	background-color:#c0ffc0;
+	background-color: #c0d7ff;
 	width: auto;
 	min-width: 85px; 
 }
 .btnOff{
 	background-color:#ffc0c0;
+	background-color: #c0d7ff;
 	width: auto;
 	min-width: 85px; 
 }
